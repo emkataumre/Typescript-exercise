@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Sled_1 = require("./Sled");
+const Santa_1 = require("./Santa");
+const Bag_1 = require("./Bag");
+const enums_1 = require("./enums");
+const Present_1 = require("./Present");
+const mySanta = new Santa_1.Santa("Emil", 20);
+const mySled = new Sled_1.Sled(mySanta);
+const myBag = new Bag_1.Bag(25, enums_1.BagType.canvas);
+const emilPresent = new Present_1.Present("forEmil", 8, enums_1.PresentType.hard);
+const mathiasPresent = new Present_1.Present("forMathias", 3, enums_1.PresentType.soft);
+myBag.addPresent(emilPresent);
+myBag.addPresent(mathiasPresent);
+mySled.addBag(myBag);
